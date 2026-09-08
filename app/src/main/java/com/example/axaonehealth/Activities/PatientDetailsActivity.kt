@@ -5,9 +5,6 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.axaonehealth.R
 import com.example.axaonehealth.databinding.ActivityPatientDetailsBinding
 
 
@@ -37,11 +34,11 @@ class PatientDetailsActivity : AppCompatActivity() {
         val department = intent.getStringExtra("department")
         val lastVisit = intent.getStringExtra("lastVisit")
         val isActiveBool = intent.getBooleanExtra("isActive",false)
-        val isActive = "Inactive"
+        var isActive = "Inactive"
 
-        //Changes the true/false to active/inactive (better UX imo)
-        if(isActiveBool == true){
-            val isActive = "Active"
+        //Changes the isActive variable to be "Active" if the boolean is true (UX choice i thought would be nice)
+        if(isActiveBool){
+            isActive = "Active"
         }
 
 
@@ -51,10 +48,10 @@ class PatientDetailsActivity : AppCompatActivity() {
         binding.ValueDepartment.text = department
         binding.ValueAge.text = age.toString()
         binding.ValueLastVisit.text = lastVisit
-        binding.ValueStatus.text = isActive.toString().replaceFirstChar { it.uppercase() } // (Made the Status have a upper case in the beginning)(Ui choice i made)
+        binding.ValueStatus.text = isActive
 
         //sets isActive color to red if not active (UI choice i thought would be good for whoever reads the profile)
-        if(isActive.equals("Inactive")){
+        if(isActive == "Inactive"){
             binding.ValueStatus.setTextColor(Color.RED)
         }
 

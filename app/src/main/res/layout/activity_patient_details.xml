@@ -200,7 +200,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="32dp"
-        android:text="View Full Medical Record"
+        android:text="@string/PatientDetailsRecordButton"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="bold"
