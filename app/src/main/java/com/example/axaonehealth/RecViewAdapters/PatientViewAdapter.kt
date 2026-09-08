@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.axaonehealth.Activities.PatientDetailsActivity
 import com.example.axaonehealth.DataClasses.Patient
 import com.example.axaonehealth.R
-class PatientViewAdapter(private val patients:List<Patient>) : RecyclerView.Adapter<PatientViewAdapter.PatientViewHolder>() {
+class PatientViewAdapter(private var patients:List<Patient>) : RecyclerView.Adapter<PatientViewAdapter.PatientViewHolder>() {
 
 
     //Creating class for view holder
@@ -36,7 +36,7 @@ class PatientViewAdapter(private val patients:List<Patient>) : RecyclerView.Adap
 
         holder.name.text = patient.name
         holder.department.text = patient.department
-        holder.patientLastVisit.text = "Last Visit: " + patient.lastVisit
+        holder.patientLastVisit.text = holder.itemView.context.getString(R.string.PatientListLastVisit) + " " + patient.lastVisit //gets the Last Visit text from strings resource in case diff languages
 
 
         //putting a listner to hear for user click
@@ -55,6 +55,12 @@ class PatientViewAdapter(private val patients:List<Patient>) : RecyclerView.Adap
             holder.itemView.context.startActivity(intent)
         }
 
+    }
+
+    //Function that updates the list (Used mostly for searching and filtering)
+    fun updateList(newList : List<Patient>){
+        patients = newList;
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {

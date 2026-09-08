@@ -10,4 +10,5 @@
     <color name="textTertiary">#718096</color>
     <color name="cardStroke">#E6F0FA</color>
     <color name="backgroundGrey">#F7F9FC</color>
+    <color name="softwhite">#f8fcff</color>
 </resources>

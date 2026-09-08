@@ -5,4 +5,7 @@
     <string name="PatientDetailsAge">Age</string>
     <string name="PatientDetailsLastVisit">Last Visit</string>
     <string name="PatientDetailsStatus">Status</string>
+    <string name="PatientDetailsRecordButton">View Full Medical Record</string>
+    <string name="PatientListLastVisit">Last Visit:</string>
+    <string name="PatientListSearchText">Search Patients...</string>
 </resources>
