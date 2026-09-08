@@ -3,4 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="axaBlue">#00008F</color>
+    <color name="oneHealthNavy">#002266</color>
+    <color name="oneHealthButtonBlue">#0050D2</color>
+    <color name="textPrimary">@color/oneHealthNavy</color>
+    <color name="textSecondary">#4A5568</color>
+    <color name="textTertiary">#718096</color>
+    <color name="cardStroke">#E6F0FA</color>
+    <color name="backgroundGrey">#F7F9FC</color>
 </resources>

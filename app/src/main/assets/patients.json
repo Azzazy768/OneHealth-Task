@@ -1,0 +1,9 @@
+{
+  "patients": [
+    { "id": 1, "name": "Mona Adel", "age": 34, "department": "Cardiology", "lastVisit": "2025-02-11", "isActive": true },
+    { "id": 2, "name": "Karim Fouad", "age": 52, "department": "Orthopedics", "lastVisit": "2024-11-03", "isActive": false },
+    { "id": 3, "name": "Salma Nabil", "age": 28, "department": "Dermatology", "lastVisit": "2025-01-22", "isActive": true },
+    { "id": 4, "name": "Youssef Hany", "age": 41, "department": "Neurology", "lastVisit": "2025-03-01", "isActive": true },
+    { "id": 5, "name": "Dina Sherif", "age": 63, "department": "Cardiology", "lastVisit": "2024-09-17", "isActive": false }
+  ]
+}

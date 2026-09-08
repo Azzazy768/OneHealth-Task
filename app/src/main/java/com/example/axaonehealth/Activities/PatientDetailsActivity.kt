@@ -1,0 +1,47 @@
+package com.example.axaonehealth.Activities
+
+import android.graphics.Color
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.axaonehealth.R
+import com.example.axaonehealth.databinding.ActivityPatientDetailsBinding
+
+
+class PatientDetailsActivity : AppCompatActivity() {
+
+    //enabiling view binding to make it eaiser to access UI stuff (again) (my personal preference tbh)
+    private lateinit var binding: ActivityPatientDetailsBinding
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        binding = ActivityPatientDetailsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //getting the values from the previous intent
+        val id = intent.getIntExtra("id",0)
+        val name = intent.getStringExtra("name")
+        val age = intent.getIntExtra("age",0)
+        val department = intent.getStringExtra("department")
+        val lastVisit = intent.getStringExtra("lastVisit")
+        val isActive = intent.getBooleanExtra("isActive",false)
+
+        //setting values
+        binding.DetailPatientName.text = name
+        binding.DetailPatientId.text = "Patient ID: " + id.toString()
+        binding.ValueDepartment.text = department
+        binding.ValueAge.text = age.toString()
+        binding.ValueLastVisit.text = lastVisit
+        binding.ValueStatus.text = isActive.toString().replaceFirstChar { it.uppercase() } // (Made the Status have a upper case in the beginning)(Ui choice i made)
+
+        //sets isActive color to red if not active (UI choice i thought would be good for whoever reads the profile)
+        if(!isActive){
+            binding.ValueStatus.setTextColor(Color.RED)
+        }
+
+    }
+}

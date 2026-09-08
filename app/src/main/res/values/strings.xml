@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Axa One Health</string>
     <string name="PatientNotFound_Text">Patients Not Found</string>
+    <string name="PatientDetailsDepartment">Department</string>
+    <string name="PatientDetailsAge">Age</string>
+    <string name="PatientDetailsLastVisit">Last Visit</string>
+    <string name="PatientDetailsStatus">Status</string>
 </resources>

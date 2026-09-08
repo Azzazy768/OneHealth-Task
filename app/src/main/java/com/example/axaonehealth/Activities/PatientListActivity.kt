@@ -61,7 +61,7 @@ class PatientListActivity : AppCompatActivity() {
         //Gets the array of patients from the json object
         val patientsJson = jsonObject.getAsJsonArray("patients")
 
-        //Returns the array as patient Objects
+        //Returns the array as patient Objects (something to note, Gson automaticlly takes each key and maps it to the patient class by comparing variables names to keys, so if i change the patient class variables, it can break).
         return patientsJson.map{Gson().fromJson(it, Patient::class.java)}
     }
 }

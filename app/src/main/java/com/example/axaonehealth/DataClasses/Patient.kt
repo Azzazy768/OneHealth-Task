@@ -1,3 +1,6 @@
 package com.example.axaonehealth.DataClasses
 
-data class Patient(val patientID: Int, val patientName: String, val age:Int, val department:String, val lastVisit:String, val isActive:Boolean)
+import android.os.Parcelable
+
+
+data class Patient(val id: Int, val name: String, val age:Int, val department:String, val lastVisit:String, val isActive:Boolean)
