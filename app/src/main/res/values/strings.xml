@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Axa One Health</string>
+    <string name="PatientNotFound_Text">Patients Not Found</string>
+</resources>
