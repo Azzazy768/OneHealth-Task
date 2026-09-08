@@ -7,6 +7,7 @@
 - **Patient List Screen**: Parses a JSON file to load patients into a Recycler View. A "No Patients Found" screen can be found if the database is empty.
 - **Patient Details Screen**: When a patient is clicked, further details are displayed in a separate screen.
 - **Dual Language Support**: Both English and Arabic text is supported where it can be applied. May be switched using a button.
+- **Search and Filter Feature**: Users can type up and search for patients by name!
 - **General UX|UI**: Attempts to follow One Health's color scheme and UI elements where possible.
 
 ## Project Structure:
