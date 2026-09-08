@@ -1,5 +1,7 @@
 # OneHealth Task
 
+(To whom it may concern, please note, I like to comment in my work a lot to help me keep track of what does what, where and why. These are handwritten comments!)
+
 ## Features:
 
 - Patient List Screen: Parses a JSON file to load patients into a Recycler View. A "No Patients Found" screen can be found if the database is empty.
@@ -16,7 +18,7 @@
 - Data Classes:
   - Patient: Data class that represents the patient schema from the JSON database. Used by the recycler view to access an patient's information.
 
--Rec. View Adapters:
+- Rec. View Adapters:
   - PatientViewAdapter: The adapter for (PatientDetailsActivity)'s Rec. View. Listens for user input and start's the next intent (PatientDetailsActivity)
 
 
