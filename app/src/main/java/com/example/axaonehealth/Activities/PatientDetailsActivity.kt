@@ -1,5 +1,6 @@
 package com.example.axaonehealth.Activities
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -22,13 +23,27 @@ class PatientDetailsActivity : AppCompatActivity() {
         binding = ActivityPatientDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //back button setup
+        binding.BackButton.setOnClickListener {
+            val intent = Intent(this, PatientListActivity::class.java)
+            startActivity(intent)
+        }
+
+
         //getting the values from the previous intent
         val id = intent.getIntExtra("id",0)
         val name = intent.getStringExtra("name")
         val age = intent.getIntExtra("age",0)
         val department = intent.getStringExtra("department")
         val lastVisit = intent.getStringExtra("lastVisit")
-        val isActive = intent.getBooleanExtra("isActive",false)
+        val isActiveBool = intent.getBooleanExtra("isActive",false)
+        val isActive = "Inactive"
+
+        //Changes the true/false to active/inactive (better UX imo)
+        if(isActiveBool == true){
+            val isActive = "Active"
+        }
+
 
         //setting values
         binding.DetailPatientName.text = name
@@ -39,7 +54,7 @@ class PatientDetailsActivity : AppCompatActivity() {
         binding.ValueStatus.text = isActive.toString().replaceFirstChar { it.uppercase() } // (Made the Status have a upper case in the beginning)(Ui choice i made)
 
         //sets isActive color to red if not active (UI choice i thought would be good for whoever reads the profile)
-        if(!isActive){
+        if(isActive.equals("Inactive")){
             binding.ValueStatus.setTextColor(Color.RED)
         }
 
