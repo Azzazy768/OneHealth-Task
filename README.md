@@ -23,3 +23,4 @@
   - **PatientViewAdapter**: The adapter for (PatientDetailsActivity)'s Rec. View. Listens for user input and start's the next intent (PatientDetailsActivity)
 
 
+
