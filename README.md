@@ -17,6 +17,6 @@
   - Patient: Data class that represents the patient schema from the JSON database. Used by the recycler view to access an patient's information.
 
 -Rec. View Adapters:
-  - PatientViewAdapter: The adapter for (PatientDetailsActivity)'s Rec. View. Listens for user input and start's the next intent (PatientDetailsActivity) whenever the user clicks on a patient. Patient Details are sent through to the next intent.
+  - PatientViewAdapter: The adapter for (PatientDetailsActivity)'s Rec. View. Listens for user input and start's the next intent (PatientDetailsActivity)
 
 
