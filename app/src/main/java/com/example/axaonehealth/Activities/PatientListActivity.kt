@@ -35,7 +35,9 @@ class PatientListActivity : AppCompatActivity() {
 
         if(patientList.isEmpty()){
             binding.PatientListView.visibility = View.GONE
+            binding.SearchContainer.visibility = View.GONE
             binding.PatientNotFoundText.visibility = View.VISIBLE
+
         }
         else{
             binding.PatientNotFoundText.visibility = View.INVISIBLE

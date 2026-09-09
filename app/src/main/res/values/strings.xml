@@ -8,4 +8,7 @@
     <string name="PatientDetailsRecordButton">View Full Medical Record</string>
     <string name="PatientListLastVisit">Last Visit:</string>
     <string name="PatientListSearchText">Search Patients...</string>
+    <string name="PatientListGreeting">Hi Omar</string>
+    <string name="PatientListTagline">How may we assist you?</string>
+    <string name="PatientDetailsTitle">Patient Details</string>
 </resources>

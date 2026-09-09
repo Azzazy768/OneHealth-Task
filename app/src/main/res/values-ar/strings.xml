@@ -9,5 +9,9 @@
     <string name="PatientDetailsRecordButton">عرض الملف الطبي بالكامل</string>
     <string name="PatientListLastVisit">"آخر زيارة: "</string>
     <string name="PatientListSearchText">البحث عن المرضى...</string>
+    <string name="PatientListGreeting">مرحبا يا عمر</string>
+    <string name="PatientListTagline">إزاي نقدر نساعدك؟</string>
+    <string name="PatientDetailsTitle">بيانات المريض</string>
+
 
 </resources>
